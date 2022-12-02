@@ -40,14 +40,14 @@ i = 0
 while len(oxygen_data) > 1:
     bits = [d[i] for d in oxygen_data]
     counter = Counter(bits)
-    
+
     most_common = counter.most_common()[0][0]
     if counter["0"] == counter["1"]:
         most_common = "1"
-    
+
     oxygen_data = list(filter(lambda e: e[i] == most_common, oxygen_data))
     # print(oxygen_data)
-    i+= 1
+    i += 1
 
 oxygen_rating = int(oxygen_data[0], base=2)
 print(f"{oxygen_rating=}")
@@ -58,11 +58,11 @@ i = 0
 while len(co2_data) > 1:
     bits = [d[i] for d in co2_data]
     counter = Counter(bits)
-    
+
     least_common = counter.most_common()[1][0]
     if counter["0"] == counter["1"]:
         least_common = "0"
-    
+
     co2_data = list(filter(lambda e: e[i] == least_common, co2_data))
     # print(co2_data)
     i += 1
@@ -71,4 +71,3 @@ co2_rating = int(co2_data[0], base=2)
 print(f"{co2_rating=}")
 
 print(oxygen_rating * co2_rating)
-

@@ -1,5 +1,5 @@
 # https://adventofcode.com/2021/day/11
-from advent_of_code import get_input_data
+from util import get_input_data
 from collections import namedtuple
 from itertools import product
 

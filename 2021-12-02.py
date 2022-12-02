@@ -5,6 +5,7 @@ from pathlib import Path
 
 input_file = Path("2021-12-02_input.txt")
 
+
 def part_one(input_file: Path):
     depth = 0
     position = 0
@@ -13,7 +14,7 @@ def part_one(input_file: Path):
             line = line.strip("\n")
             command, value = line.split(" ")
             value = int(value)
-            
+
             if command == "forward":
                 position += value
             elif command == "down":
@@ -22,7 +23,9 @@ def part_one(input_file: Path):
                 depth -= value
     return depth * position
 
+
 # Dive! - Part Two
+
 
 def part_two(input_file: Path):
     depth = 0
@@ -33,7 +36,7 @@ def part_two(input_file: Path):
             line = line.strip("\n")
             command, value = line.split(" ")
             value = int(value)
-            
+
             if command == "forward":
                 position += value
                 depth += aim * value
@@ -43,6 +46,5 @@ def part_two(input_file: Path):
                 aim -= value
     return depth * position
 
-print(part_two(input_file))
-    
 
+print(part_two(input_file))

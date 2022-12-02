@@ -1,5 +1,5 @@
 # https://adventofcode.com/2021/day/10
-from advent_of_code import get_input_data
+from util import get_input_data
 from statistics import median
 
 input_file = get_input_data(2021, 10)
